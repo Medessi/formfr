@@ -1,0 +1,320 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtenir votre crédit - Crédit Card</title>
+    
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Obtenez votre crédit rapidement et facilement avec notre service de carte de crédit. Découvrez les meilleures options et appliquez dès aujourd'hui.">
+    
+    <!-- Meta keywords for SEO -->
+    <meta name="keywords" content="crédit, carte de crédit, obtenir crédit, prêt, finances, service de crédit">
+    
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Obtenir votre crédit - Crédit Card">
+    <meta property="og:description" content="Obtenez votre crédit rapidement et facilement avec notre service de carte de crédit. Découvrez les meilleures options et appliquez dès aujourd'hui.">
+    <meta property="og:image" content="URL_de_l_image_de_votre_service.jpg">
+    <meta property="og:url" content="URL_de_votre_page.html">
+    
+    <!-- Logo SVG Style -->
+    <style>
+        .logo {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        .logo svg {
+            max-width: 150px;
+            height: auto;
+            vertical-align: middle;
+        }
+        
+        .logo:hover {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .logo svg {
+                max-width: 120px;
+            }
+        }
+    </style>
+
+    <!-- Logo SVG Definition -->
+    <svg style="display: none;">
+        <symbol id="credit-card-logo" viewBox="0 0 300 100">
+            <!-- Card Shape -->
+            <rect x="40" y="20" width="160" height="100" rx="10" fill="#003366"/>
+            <rect x="45" y="25" width="150" height="90" rx="8" fill="#0066cc" opacity="0.8"/>
+            
+            <!-- Chip -->
+            <rect x="60" y="45" width="30" height="25" rx="3" fill="#e6f2ff"/>
+            <rect x="65" y="50" width="20" height="3" fill="#003366"/>
+            <rect x="65" y="56" width="20" height="3" fill="#003366"/>
+            <rect x="65" y="62" width="20" height="3" fill="#003366"/>
+            
+            <!-- Text -->
+            <text x="220" y="65" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#003366">CRÉDIT</text>
+            <text x="220" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#0066cc">CARD</text>
+            
+            <!-- Decorative Lines -->
+            <path d="M100 80 Q 120 70, 140 80" stroke="#e6f2ff" stroke-width="2" fill="none"/>
+            <path d="M110 85 Q 130 75, 150 85" stroke="#e6f2ff" stroke-width="2" fill="none"/>
+        </symbol>
+    </svg>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "b98lin6-uqxmDCPlr",
+            });
+        })();
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+     <!--  <div class="language-selector">
+    <label for="language">Choisissez votre langue : </label>
+    <select id="language">
+      <option value="fr">Français</option>
+      <option value="lt">Lituanien</option>
+    </select>
+  </div>-->
+
+  <div class="quiz-container">
+    <div class="company-name">Crédit Card</div>
+    <div class="quiz-image"></div>
+    <h1>Quiz pour l'obtention d'un prêt</h1>
+    <div id="quiz">
+      <p class="question fade-in" id="question"></p>
+      <div class="answers fade-in" id="answers"></div>
+      <div class="navigation">
+        <button id="prevBtn" class="nav-btn" disabled>Précédent</button>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div id="contact-form" style="display: none;" class="contact-form fade-in">
+      <div class="form-header">
+        <h2>Formulaire de contact</h2>
+        <p>Merci d'avoir complété notre quiz. Veuillez remplir le formulaire ci-dessous pour que nous puissions vous contacter avec une offre personnalisée.</p>
+      </div>
+      <form id="form">
+        <div class="form-group icon-input">
+          <label for="name">Nom complet</label>
+          <i class="fas fa-user"></i>
+          <input type="text" id="name" name="name" required placeholder="Entrez votre nom complet">
+        </div>
+        <div class="form-group icon-input">
+          <label for="email">Adresse e-mail</label>
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" name="email" required placeholder="Entrez votre adresse e-mail">
+        </div>
+        <div class="form-group icon-input">
+          <label for="phone">Numéro de téléphone</label>
+          <i class="fas fa-phone"></i>
+          <input type="tel" id="phone" name="phone" required placeholder="Entrez votre numéro de téléphone">
+        </div>
+        <div class="form-group">
+          <label for="message">Message (optionnel)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Si vous avez des questions ou des commentaires, n'hésitez pas à les ajouter ici"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer ma demande</button>
+      </form>
+      <div class="form-footer">
+        En soumettant ce formulaire, vous acceptez que nous utilisions vos informations conformément à notre politique de confidentialité.
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Crédit Card. Tous droits réservés.</p>
+      <p><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Merci pour votre soumission !</h2>
+      <p>Nous avons bien reçu votre demande. Un conseiller vous contactera bientôt avec une offre personnalisée.</p>
+      <button id="closePopup" class="submit-btn">Fermer</button>
+    </div>
+  </div>
+  <div id="loader" class="loader"></div>
+
+  <script>
+    const questions = [
+      {
+        question: "Quel est le montant du prêt que vous souhaitez obtenir ?",
+        answers: [
+          { text: "Moins de 5 000 €", icon: "fas fa-coins" },
+          { text: "Entre 5 000 € et 15 000 €", icon: "fas fa-money-bill-wave" },
+          { text: "Entre 15 000 € et 50 000 €", icon: "fas fa-money-check-alt" },
+          { text: "Plus de 50 000 €", icon: "fas fa-university" }
+        ]
+      },
+      {
+        question: "Quelle est la durée de remboursement souhaitée ?",
+        answers: [
+          { text: "Moins de 12 mois", icon: "fas fa-clock" },
+          { text: "Entre 1 et 3 ans", icon: "fas fa-calendar-alt" },
+          { text: "Entre 3 et 5 ans", icon: "fas fa-calendar-check" },
+          { text: "Plus de 5 ans", icon: "fas fa-hourglass-end" }
+        ]
+      },
+      {
+        question: "Quel est votre statut professionnel ?",
+        answers: [
+          { text: "Salarié en CDI", icon: "fas fa-briefcase" },
+          { text: "Salarié en CDD", icon: "fas fa-business-time" },
+          { text: "Travailleur indépendant", icon: "fas fa-laptop" },
+          { text: "Retraité", icon: "fas fa-umbrella-beach" },
+          { text: "Étudiant", icon: "fas fa-user-graduate" }
+        ]
+      },
+      {
+        question: "Quel est votre revenu mensuel net ?",
+        answers: [
+          { text: "Moins de 1 500 €", icon: "fas fa-euro-sign" },
+          { text: "Entre 1 500 € et 2 500 €", icon: "fas fa-comment-dollar" },
+          { text: "Entre 2 500 € et 4 000 €", icon: "fas fa-hand-holding-usd" },
+          { text: "Plus de 4 000 €", icon: "fas fa-piggy-bank" }
+        ]
+      },
+      {
+        question: "Avez-vous d'autres crédits en cours ?",
+        answers: [
+          { text: "Non, aucun crédit", icon: "fas fa-check-circle" },
+          { text: "Oui, un crédit immobilier", icon: "fas fa-home" },
+          { text: "Oui, un ou plusieurs crédits à la consommation", icon: "fas fa-shopping-cart" },
+          { text: "Oui, plusieurs types de crédits", icon: "fas fa-layer-group" }
+        ]
+      }
+    ];
+
+    let currentQuestion = 0;
+    
+    const questionElement = document.getElementById("question");
+    const answersElement = document.getElementById("answers");
+    const progressElement = document.getElementById("progress");
+    const quizElement = document.getElementById("quiz");
+    const contactFormElement = document.getElementById("contact-form");
+    const prevBtn = document.getElementById("prevBtn");
+
+    let userAnswers = [];
+
+    function showQuestion(index) {
+      const question = questions[index];
+      questionElement.textContent = question.question;
+      answersElement.innerHTML = "";
+      question.answers.forEach((answer, i) => {
+        const button = document.createElement("button");
+        button.innerHTML = `<i class="${answer.icon}"></i><span>${answer.text}</span>`;
+        button.classList.add("answer", "fade-in");
+        button.addEventListener("click", () => selectAnswer(i));
+        answersElement.appendChild(button);
+      });
+      updateProgress();
+      updateNavButtons();
+    }
+
+    function selectAnswer(answerIndex) {
+      userAnswers[currentQuestion] = answerIndex;
+      updateAnswerStyles();
+      
+      setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+          currentQuestion++;
+          showQuestion(currentQuestion);
+        } else {
+          showResult();
+        }
+      }, 500);
+    }
+
+    function updateAnswerStyles() {
+      const answerButtons = answersElement.querySelectorAll('.answer');
+      answerButtons.forEach((button, index) => {
+        if (index === userAnswers[currentQuestion]) {
+          button.style.backgroundColor = '#d4edda';
+          button.style.borderColor = '#c3e6cb';
+        } else {
+          button.style.backgroundColor = '#ffffff';
+          button.style.borderColor = '#003366';
+        }
+      });
+    }
+
+    function updateProgress() {
+      const progress = ((currentQuestion + 1) / questions.length) * 100;
+      progressElement.style.width = `${progress}%`;
+    }
+
+    function updateNavButtons() {
+      prevBtn.disabled = currentQuestion === 0;
+    }
+
+    function showResult() {
+      quizElement.style.display = "none";
+      contactFormElement.style.display = "block";
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    });
+
+    document.getElementById("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const loader = document.getElementById("loader");
+  const popup = document.getElementById("popup");
+
+  // Afficher le loader
+  loader.style.display = "flex";
+
+  // Récupération des réponses sous forme de texte pour l'email
+const answersText = questions.map((question, i) => {
+  const answerIndex = userAnswers[i];
+  return `${question.question}: ${question.answers[answerIndex].text}`;
+}).join('\n');
+
+// Création des paramètres à envoyer via EmailJS
+const templateParams = {
+  name: document.getElementById("name").value,
+  email: document.getElementById("email").value,
+  phone: document.getElementById("phone").value,
+  message: document.getElementById("message").value,
+  userAnswers: answersText
+};
+
+// Appel à EmailJS pour envoyer l'email
+emailjs.send('service_5tixmoz', 'template_4avnotm', templateParams)
+  .then(() => {
+    console.log('Email envoyé avec succès');
+    // Afficher le popup après l'envoi de l'email
+    loader.style.display = "none";
+    popup.style.display = "flex";
+  })
+  .catch((error) => {
+    console.error('Erreur lors de l\'envoi de l\'email:', error);
+    // Masquer le loader même en cas d'erreur
+    loader.style.display = "none";
+  });
+});
+
+document.getElementById("closePopup").addEventListener("click", function() {
+  document.getElementById("popup").style.display = "none";
+});
+
+showQuestion(currentQuestion);
+  </script>
+</body>
+</html>
